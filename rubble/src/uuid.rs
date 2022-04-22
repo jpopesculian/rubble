@@ -112,6 +112,12 @@ impl Uuid128 {
     }
 }
 
+impl AsRef<[u8]> for Uuid128 {
+    fn as_ref(&self) -> &[u8] {
+        &self.0
+    }
+}
+
 impl From<Uuid16> for Uuid32 {
     fn from(smol: Uuid16) -> Self {
         Uuid32(smol.0.into())

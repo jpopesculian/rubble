@@ -21,7 +21,7 @@ impl Handle {
     }
 
     /// Create an attribute handle from a raw u16
-    pub fn from_raw(raw: u16) -> Self {
+    pub const fn from_raw(raw: u16) -> Self {
         Handle(raw)
     }
 }
